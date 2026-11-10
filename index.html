@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: page title shown in the browser tab -->
+  <title>CYBR 201 Website</title>
+  <meta name="description" content="CYBR 201 website">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wrap">
+    <!-- EDIT: site name -->
+    <h1>CYBR 201 Website</h1>
+    <!-- EDIT: one line about you -->
+    <p class="lead">A short line about who you are and what you do.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>About</h2>
+      <!-- EDIT: a few sentences about yourself -->
+      <p>Replace this paragraph with a few sentences about yourself: your background, what you are working on, and what you are interested in.</p>
+    </section>
+
+    <section id="work">
+      <h2>Work</h2>
+      <!-- EDIT: copy an <article> block for each project, delete the ones you don't need -->
+      <article>
+        <h3>Project one</h3>
+        <p>One or two sentences describing the project.</p>
+      </article>
+      <article>
+        <h3>Project two</h3>
+        <p>One or two sentences describing the project.</p>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <!-- EDIT: replace with your real links -->
+      <p>
+        <a href="https://github.com/shayaan3487">GitHub</a> ·
+        <a href="mailto:you@example.com">Email</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>&copy; <span id="year"></span> CYBR 201</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
