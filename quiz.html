@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy &amp; Security Checkup | Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">Privacy &amp; Security Checkup</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="quiz.html" aria-current="page">Take the Quiz</a></li>
+        <li><a href="background.html">Background</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Privacy and security quiz</h1>
+      <p>TODO: short instructions. Mention that nothing typed leaves the page and we never ask for a password.</p>
+    </section>
+
+    <section>
+      <!-- Progress counter (Feature 2 in script.js) -->
+      <p id="progress-text">0 of 6 questions answered</p>
+
+      <!-- Error messages from JavaScript validation go here -->
+      <div id="form-errors" role="alert" hidden>
+        <p>Please fix the following:</p>
+        <ul id="error-list"></ul>
+      </div>
+
+      <form id="checkup-form">
+        <!--
+          TODO: add the fields from the proposal. Every field needs a <label>
+          and HTML validation (required, minlength/maxlength, pattern).
+
+          - First name or nickname (text, 2 to 30 letters)
+          - 1. How do you handle passwords? (radio buttons)
+          - 2. Do you use two-factor authentication? (radio buttons)
+          - 3. How often do you install updates? (dropdown)
+          - 4. Does your phone have a screen lock? (radio buttons)
+          - 5. Who can see your social media profiles? (dropdown)
+          - 6. Do you back up your phone and important files? (dropdown)
+          - What worries you most? (checkboxes, at least one)
+        -->
+
+        <button type="submit">See my results</button>
+      </form>
+
+      <!-- Score and tips (Feature 3 in script.js) -->
+      <div id="results" hidden>
+        <h2 id="results-title"></h2>
+        <ul id="results-tips"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>CYBR 201 Final Team Project, Fall 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
