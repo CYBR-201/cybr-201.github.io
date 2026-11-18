@@ -47,13 +47,14 @@
           It can be from 2 to 30 letters.</p>
             <div>
               <label for="name">Name:</label>
-              <input type="text" id="responses" name="name" placeholder="e.g. Shayaan"
+              <input type="text" id="name" name="name" placeholder="e.g. Shayaan"
               required minlength="2" maxlength="30" pattern="[A-Za-z]{2,30}">
             </div>
 
             <br>
 
           <!-- 1. How do you handle passwords? (radio buttons) -->
+          <fieldset>
             <legend>1. How do you handle passwords?</legend>
             <div>
               <input type="radio" name="passwords" id="pw-unique" value="unique" required>
@@ -71,10 +72,12 @@
               <input type="radio" name="passwords" id="pw-memory" value="memory">
               <label for="pw-memory">Memorize them or write them down</label>
             </div>
+          </fieldset>
 
             <br>
 
           <!-- 2. Do you use two-factor authentication? (radio buttons) -->
+          <fieldset>
             <legend>2. Do you use two-factor authentication?</legend>
             <div>
               <input type="radio" name="two-factor" id="tfa-all" value="all" required>
@@ -88,6 +91,7 @@
               <input type="radio" name="two-factor" id="tfa-no" value="no">
               <label for="tfa-no">No</label>
             </div>
+          </fieldset>
 
             <br>
 
@@ -107,6 +111,7 @@
             <br>
 
           <!-- 4. Does your phone have a screen lock? (radio buttons) -->
+          <fieldset>
             <legend>4. Does your phone have a screen lock?</legend>
             <div>
               <input type="radio" name="screen-lock" id="lock-biometric" value="biometric" required>
@@ -120,6 +125,7 @@
               <input type="radio" name="screen-lock" id="lock-none" value="none">
               <label for="lock-none">No</label>
             </div>
+          </fieldset>
 
             <br>
 
@@ -153,6 +159,7 @@
             <br>
 
           <!-- 7. What are your biggest privacy and security concerns? (checkboxes, at least two) -->
+          <fieldset>
             <legend>7. What is your biggest privacy and security concern?</legend>
             <div>
               <input type="checkbox" name="concerns" id="c-phishing" value="phishing">
@@ -178,6 +185,7 @@
               <input type="checkbox" name="concerns" id="c-wifi" value="public-wifi">
               <label for="c-wifi">Unsafe public Wi-Fi</label>
             </div>
+          </fieldset>
 
 			<br>
 
