@@ -20,7 +20,7 @@
 
   <main>
     <section>
-      <h1>Privacy and security quiz</h1>
+      <h1>Privacy and Security quiz</h1>
       <p>TODO: short instructions. Mention that nothing typed leaves the page and we never ask for a password.</p>
     </section>
 
@@ -38,16 +38,156 @@
         <!--
           TODO: add the fields from the proposal. Every field needs a <label>
           and HTML validation (required, minlength/maxlength, pattern).
-
-          - First name or nickname (text, 2 to 30 letters)
-          - 1. How do you handle passwords? (radio buttons)
-          - 2. Do you use two-factor authentication? (radio buttons)
-          - 3. How often do you install updates? (dropdown)
-          - 4. Does your phone have a screen lock? (radio buttons)
-          - 5. Who can see your social media profiles? (dropdown)
-          - 6. Do you back up your phone and important files? (dropdown)
-          - What worries you most? (checkboxes, at least one)
         -->
+
+        <!-- ** All line breaks should be temporary, as CSS should be used for proper spacing ** -->
+
+          <!-- - First name or nickname (text, 2 to 30 letters) -->
+          <p>Please enter your first name or a nickname.<br>
+          It can be from 2 to 30 letters.</p>
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Shayaan"
+              required minlength="2" maxlength="30" pattern="[A-Za-z]{2,30}">
+            </div>
+
+            <br>
+
+          <!-- 1. How do you handle passwords? (radio buttons) -->
+          <fieldset>
+            <legend>1. How do you handle passwords?</legend>
+            <div>
+              <input type="radio" name="passwords" id="pw-unique" value="unique" required>
+              <label for="pw-unique">Unique password for every account</label>
+            </div>
+            <div>
+              <input type="radio" name="passwords" id="pw-manager" value="manager">
+              <label for="pw-manager">Password manager</label>
+            </div>
+            <div>
+              <input type="radio" name="passwords" id="pw-reuse" value="reuse">
+              <label for="pw-reuse">Reuse the same few passwords</label>
+            </div>
+            <div>
+              <input type="radio" name="passwords" id="pw-memory" value="memory">
+              <label for="pw-memory">Memorize them or write them down</label>
+            </div>
+          </fieldset>
+
+            <br>
+
+          <!-- 2. Do you use two-factor authentication? (radio buttons) -->
+          <fieldset>
+            <legend>2. Do you use two-factor authentication?</legend>
+            <div>
+              <input type="radio" name="two-factor" id="tfa-all" value="all" required>
+              <label for="tfa-all">Yes, on all accounts that offer it</label>
+            </div>
+            <div>
+              <input type="radio" name="two-factor" id="tfa-some" value="some">
+              <label for="tfa-some">Yes, on some accounts</label>
+            </div>
+            <div>
+              <input type="radio" name="two-factor" id="tfa-no" value="no">
+              <label for="tfa-no">No</label>
+            </div>
+          </fieldset>
+
+            <br>
+
+          <!-- 3. How often do you install updates? (dropdown) -->
+          <div>
+            <label for="updates">3. How often do you install updates?</label>
+            <select id="updates" name="updates" required>
+              <option value="">-- Choose one --</option>
+              <option value="automatic">Automatically, as soon as they're available</option>
+              <option value="week">Within a week</option>
+              <option value="month">Within a month</option>
+              <option value="rarely">Rarely</option>
+              <option value="never">Never</option>
+            </select>
+          </div>
+
+            <br>
+
+          <!-- 4. Does your phone have a screen lock? (radio buttons) -->
+          <fieldset>
+            <legend>4. Does your phone have a screen lock?</legend>
+            <div>
+              <input type="radio" name="screen-lock" id="lock-biometric" value="biometric" required>
+              <label for="lock-biometric">Yes, biometric (fingerprint or face)</label>
+            </div>
+            <div>
+              <input type="radio" name="screen-lock" id="lock-passcode" value="passcode">
+              <label for="lock-passcode">Yes, PIN or passcode</label>
+            </div>
+            <div>
+              <input type="radio" name="screen-lock" id="lock-none" value="none">
+              <label for="lock-none">No</label>
+            </div>
+          </fieldset>
+
+            <br>
+
+          <!-- 5. Who can see your social media profiles? (dropdown) -->
+          <div>
+            <label for="social">5. Who can see your social media profiles?</label>
+            <select id="social" name="social" required>
+              <option value="">-- Choose one --</option>
+              <option value="public">Anyone (public)</option>
+              <option value="friends-of-friends">Friends and friends of friends</option>
+              <option value="friends">Friends only</option>
+              <option value="private">Only me</option>
+              <option value="none">I don't use social media</option>
+            </select>
+          </div>
+
+            <br>
+
+          <!-- 6. Do you back up your phone and important files? (dropdown) -->
+          <div>
+            <label for="backup">6. Do you back up your phone and important files?</label>
+            <select id="backup" name="backup" required>
+              <option value="">-- Choose one --</option>
+              <option value="automatic">Yes, automatically</option>
+              <option value="manual">Yes, manually from time to time</option>
+              <option value="rarely">Rarely</option>
+              <option value="never">Never</option>
+            </select>
+          </div>
+
+            <br>
+
+          <!-- 7. What are your biggest privacy and security concerns? (checkboxes, at least two) -->
+          <fieldset>
+            <legend>7. What is your biggest privacy and security concern?</legend>
+            <div>
+              <input type="checkbox" name="concerns" id="c-phishing" value="phishing">
+              <label for="c-phishing">Phishing and scams</label>
+            </div>
+            <div>
+              <input type="checkbox" name="concerns" id="c-breach" value="data-breach">
+              <label for="c-breach">Data breaches</label>
+            </div>
+            <div>
+              <input type="checkbox" name="concerns" id="c-tracking" value="tracking">
+              <label for="c-tracking">Being tracked by apps and advertisers</label>
+            </div>
+            <div>
+              <input type="checkbox" name="concerns" id="c-identity" value="identity-theft">
+              <label for="c-identity">Identity theft</label>
+            </div>
+            <div>
+              <input type="checkbox" name="concerns" id="c-malware" value="malware">
+              <label for="c-malware">Malware and viruses</label>
+            </div>
+            <div>
+              <input type="checkbox" name="concerns" id="c-wifi" value="public-wifi">
+              <label for="c-wifi">Unsafe public Wi-Fi</label>
+            </div>
+          </fieldset>
+
+			<br>
 
         <button type="submit">See my results</button>
       </form>
